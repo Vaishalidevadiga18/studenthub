@@ -211,10 +211,12 @@ import {useState} from 'react'
 import { supabase } from "@/app/lib/supabase";
 import { User2Icon,Share} from 'lucide-react';
 import useStore from '@/app/stores/studentStore';
+import { useRouter } from 'next/router';
 
 
 export default function CreateStudent() {
 
+    const router =useRouter()
     const {setActiveStudent}= useStore()
     const [name,setName] = useState("")
     const [age,setAge] = useState(0)
